@@ -6,8 +6,8 @@
 			<img src="<?=get_bloginfo('stylesheet_directory');?>/images/slide.jpeg" alt="" title="" />
 			<div class="carousel-cell-content">
 				<img src="<?=get_bloginfo('stylesheet_directory');?>/images/logo.png" alt="" title="" class="img-responsive" />
-				<p class="main-carousel--developer">Emaar</p>
-				<h3 class="main-carousel--project">316 Front St. Unit 2201</h3>
+				<p class="main-carousel--developer">MAG Property Development</p>
+				<h3 class="main-carousel--project">MAG Eye - A dream home well within your reach</h3>
 				<div class="main-carousel--action">
 					<a href="#">View project</a>
 				</div>

@@ -3,12 +3,16 @@
 .main-carousel {
 	.carousel-cell-content {
 		z-index: 1;
+		width: 70%;
 		position: absolute;
 		text-align: center;
 		img {
 		    margin: 0 auto;
 		    margin-bottom: 30px;			
 		}
+	}
+	.carousel-cell {
+		// width: 100%;
 	}
 }
 
@@ -24,7 +28,8 @@
     color: #fff;
     font-size: 60px;
     font-weight: 400;
-    margin: 10px 20px 30px;
+    line-height: 60px;
+    margin: 30px 20px 60px;
 }
 
 .main-carousel--action a {
