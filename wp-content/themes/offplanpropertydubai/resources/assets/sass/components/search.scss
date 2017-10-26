@@ -1,0 +1,63 @@
+.flex-05 {
+	flex: 0.5;
+}
+
+.flex-02 {
+	flex: 0.2;
+}
+
+.flex-01 {
+	flex: 0.1;
+}
+
+.search-container {
+	h3 {
+		color: #333;
+		font-weight: 400;
+		font-size: 20px;
+		i {
+			margin-right: 10px;
+		}
+	}
+
+	form {
+		display: flex;
+		align-items: center;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		margin-right: 20px;
+		label {
+			color: #959595;
+			font-size: 13px;
+			margin-bottom: 5px;
+		}
+		select {
+			padding: 8px 10px;
+			-webkit-appearance: none;
+			background-color: #fff;
+			border-radius: 2px;
+			border-color: #ddd;			
+		}
+		input {
+			padding: 8px 10px;
+			background-color: #fff;
+			border-radius: 2px;
+			border: 1px solid #ddd;
+		}
+		button {
+			color: #fff;
+			padding: 8px 10px;
+			border-radius: 2px;
+			font-weight: 400;
+			font-size: 14px;			
+			border: 1px solid #00aeef;
+			background-color: #00aeef;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+@import '~flickity/dist/flickity.css';
+
+.main-carousel {
+	.carousel-cell-content {
+		z-index: 1;
+		position: absolute;
+		text-align: center;
+		img {
+		    margin: 0 auto;
+		    margin-bottom: 30px;			
+		}
+	}
+}
+
+.main-carousel--developer {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.main-carousel--project {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 10px 20px 30px;
+}
+
+.main-carousel--action a {
+	color: #fff;
+	padding: 10px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+}
