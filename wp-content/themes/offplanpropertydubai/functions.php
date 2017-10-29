@@ -21,13 +21,8 @@ function my_theme_enqueue_styles() {
             array(),
             wp_get_theme()->get('Version')
         );
-        wp_enqueue_style( 'main-carousel',
-            get_stylesheet_directory_uri() . '/dist/css/main-carousel.css',
-            array(),
-            wp_get_theme()->get('Version')
-        );   
-        wp_enqueue_script( 'main-carousel',
-            get_stylesheet_directory_uri() . '/dist/js/main-carousel.js',
+        wp_enqueue_script( 'home',
+            get_stylesheet_directory_uri() . '/dist/js/home.js',
             array(),
             wp_get_theme()->get('Version'),
             true

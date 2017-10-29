@@ -79,7 +79,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="section-title">Latest projects</h2>
+					<h2 class="section-title text-center">Latest projects</h2>
 				</div>
 				<div class="col-md-12">
 					<ul class="latest-projects">
@@ -96,19 +96,19 @@
 						<?php } ?>
 					</ul>
 
-					<p>
+					<p class="text-center">
 						<a href="#" class="btn btn-primary">See all projects</a>
 					</p>					
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
-	<section>
+	<section class="explore-communities">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="section-title">Explore communities</h2>
+					<h2 class="section-title text-center">Explore communities</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -147,24 +147,27 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="section-title">Developers</h2>
+					<h2 class="section-title text-center">Developers</h2>
 				</div>
 			</div>
 			<div class="col-md-12">
 				<div class="developers-carousel">
+					<?php for ($i = 1; $i <= 12; $i++) { ?>
 					<div class="carousel-cell">
 						<img src="<?=get_bloginfo('stylesheet_directory');?>/images/developer.jpeg" alt="" title="" />
 					</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
-	<section>
+	</section>
 
 	<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
 					<!-- <img src="https://findeo.realty/wp-content/uploads/2017/08/logo.png"alt="" title="" /> -->
+					<h4>About us</h4>
 					<p>
 						Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.
 					</p>
@@ -174,8 +177,9 @@
 						<div class="col-md-6">
 							<h4>Helpful links</h4>
 							<ul>
-								<li><a href="#">Developers</a></li>
 								<li><a href="#">Projects</a></li>
+								<li><a href="#">Developers</a></li>
+								<li><a href="#">Communities</a></li>
 							</ul>
 						</div>
 						<div class="col-md-6">
