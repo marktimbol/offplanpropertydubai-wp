@@ -28,5 +28,19 @@ function my_theme_enqueue_styles() {
             true
         );           
     }
+
+    if (is_singular('projects')) {    
+        wp_enqueue_style( 'single-project',
+            get_stylesheet_directory_uri() . '/dist/css/single-project.css',
+            array(),
+            wp_get_theme()->get('Version')
+        );    
+        wp_enqueue_script( 'single-project',
+            get_stylesheet_directory_uri() . '/dist/js/single-project.js',
+            array(),
+            wp_get_theme()->get('Version'),
+            true
+        );         
+    }
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );

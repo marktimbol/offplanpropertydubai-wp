@@ -1,0 +1,32 @@
+.btn {
+	color: #333;
+    font-size: 14px;            
+    font-weight: 400;
+    padding: 8px 10px;
+    border-radius: 2px;
+    border: 1px solid #333;
+    background-color: #fff;    
+    text-transform: uppercase;
+    letter-spacing: 1.2px;    
+    transition: background-color .2s ease-in;
+    &:hover {
+    	color: #333;
+    	text-decoration: none;
+    }
+}
+
+.btn-primary {
+	color: #fff;
+    border: 1px solid #00aeef;
+    background-color: #00aeef;    
+    &:hover, &:focus, &:active {
+    	color: #fff;
+    	text-decoration: none;
+    	border: 1px solid lighten(#00aeef, 10%);
+    	background-color: lighten(#00aeef, 10%);
+    }
+}
+
+.btn-lg {
+	padding: 10px 25px;
+}

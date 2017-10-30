@@ -1,206 +1,61 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * e.g., it puts together the home page when no home.php file exists.
+ *
+ * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fifteen
+ * @since Twenty Fifteen 1.0
+ */
 
-	<div class="main-carousel">
-		<?php for ($i = 1; $i <= 3; $i++) { ?>
-		<div class="carousel-cell flex flex--center">
-			<img src="<?=get_bloginfo('stylesheet_directory');?>/images/slide.jpeg" alt="" title="" />
-			<div class="carousel-cell-content">
-				<img src="<?=get_bloginfo('stylesheet_directory');?>/images/logo.png" alt="" title="" class="img-responsive" />
-				<p class="main-carousel--developer">MAG Property Development</p>
-				<h3 class="main-carousel--project">MAG Eye - A dream home well within your reach</h3>
-				<div class="main-carousel--action">
-					<a href="#">View project</a>
-				</div>
-			</div>
-			<div class="overlay"></div>
-		</div>
-		<?php } ?>
-	</div>
+get_header(); ?>
 
-	<section class="search-container">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h3><i class="fa fa-search"></i> Search Projects</h3>
-					<form method="POST">
-						<div class="form-group flex-02">
-							<label for="location">Location</label>
-							<select name="location">
-								<option value="">All</option>
-								<option value="dubai">Dubai</option>
-								<option value="abu-dhabi">Abu Dhabi</option>
-							</select>
-						</div>
-						<div class="form-group flex-02">
-							<label for="project-type">Project type</label>
-							<select name="project-type">
-								<option value="">All</option>
-								<option value="apartment">Apartment</option>
-								<option value="villa">Villa</option>
-							</select>
-						</div>
-						<div class="form-group flex-05">
-							<label for="keyword">Enter project name</label>
-							<input type="text" name="keyword" placeholder="Search for a project, developer, or communities" />
-						</div>						
-						<div class="form-group flex-01">
-							<label>&nbsp;</label>
-							<button type="submit" class="btn btn-search">Search</button>
-						</div>	
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<img src="<?=get_bloginfo('stylesheet_directory');?>/images/slide.jpeg" alt="" title="" class="img-responsive" />
-				</div>
-				<div class="col-md-6">
-					<h2 class="section-title">About Dubai Off Plan Projects</h2>
-					<p>
-						Property which is still in the process of construction or is yet to be constructed is called off plan property. Off plan properties play a major role in strengthening the real estate sector of Dubai. Almost all property developers of Dubai have off plan projects scattered across the Emirates.
-					</p>
-					<p>
-						When buying real estate in Dubai off Plan property is a highly successful option. We offer the most comprehensive and latest information about project developments and our off plan specialists give free property consultation services.
-					</p>
-					<p>
-						<a href="#" class="btn btn-register">Register your interest</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
+		<?php if ( have_posts() ) : ?>
 
-	<section class="latest-projects-container">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="section-title text-center">Latest projects</h2>
-				</div>
-				<div class="col-md-12">
-					<ul class="latest-projects">
-						<?php for ($i = 1;$i <= 9; $i++) { ?>
-						<li class="project-card col-md-4">
-							<img src="<?=get_bloginfo('stylesheet_directory');?>/images/slide.jpeg" alt="" title="" class="img-responsive" />
-							<div class="project-card--content">
-								<h3 class="project-card--title"><a href="#">Hartland Aflux</a></h3>
-								<div class="project-card--developer">
-									<img src="<?=get_bloginfo('stylesheet_directory');?>/images/developer.jpeg" alt="" title="" class="img-responsive" />
-								</div>
-							</div>
-						</li>
-						<?php } ?>
-					</ul>
+			<?php if ( is_home() && ! is_front_page() ) : ?>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				</header>
+			<?php endif; ?>
 
-					<p class="text-center">
-						<a href="#" class="btn btn-primary">See all projects</a>
-					</p>					
-				</div>
-			</div>
-		</div>
-	</section>
+			<?php
+			// Start the loop.
+			while ( have_posts() ) : the_post();
 
-	<section class="explore-communities">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="section-title text-center">Explore communities</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-5">
-					<img src="<?=get_bloginfo('stylesheet_directory');?>/images/slide.jpeg" alt="" title="" class="img-responsive" />
-				</div>
-				<div class="col-md-7">
-					<img src="<?=get_bloginfo('stylesheet_directory');?>/images/slide.jpeg" alt="" title="" class="img-responsive" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
-					<img src="<?=get_bloginfo('stylesheet_directory');?>/images/slide.jpeg" alt="" title="" class="img-responsive" />
-				</div>
-				<div class="col-md-5">
-					<img src="<?=get_bloginfo('stylesheet_directory');?>/images/slide.jpeg" alt="" title="" class="img-responsive" />
-				</div>
-			</div>		
-		</div>
-	</section>
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'content', get_post_format() );
 
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="action-message">
-						<h3>The best investment on earth is earth</h3>
-						<p><a href="#" class="btn btn-register">Register your interest</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+			// End the loop.
+			endwhile;
 
-	<section>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="section-title text-center">Developers</h2>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="developers-carousel">
-					<?php for ($i = 1; $i <= 12; $i++) { ?>
-					<div class="carousel-cell">
-						<img src="<?=get_bloginfo('stylesheet_directory');?>/images/developer.jpeg" alt="" title="" />
-					</div>
-					<?php } ?>
-				</div>
-			</div>
-		</div>
-	</section>
+			// Previous/next page navigation.
+			the_posts_pagination( array(
+				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
+				'next_text'          => __( 'Next page', 'twentyfifteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+			) );
 
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5">
-					<!-- <img src="https://findeo.realty/wp-content/uploads/2017/08/logo.png"alt="" title="" /> -->
-					<h4>About us</h4>
-					<p>
-						Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.
-					</p>
-				</div>
-				<div class="col-md-7">
-					<div class="row">
-						<div class="col-md-6">
-							<h4>Helpful links</h4>
-							<ul>
-								<li><a href="#">Projects</a></li>
-								<li><a href="#">Developers</a></li>
-								<li><a href="#">Communities</a></li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<h4>Contact Us</h4>
-							<address>
-								Address: Dubai Off Plan<br />
-								Mobile: +971 55 966 4000<br />
-								eMail: info@offplanpropertydubai.com
-							</address>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<p class="copyright">
-						&copy; Offplan Property Dubai. All Rights Reserved.
-					</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+		// If no content, include the "No posts found" template.
+		else :
+			get_template_part( 'content', 'none' );
 
-<?php get_footer();
+		endif;
+		?>
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+<?php get_footer(); ?>

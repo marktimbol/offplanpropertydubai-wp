@@ -2811,6 +2811,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.mt-30 {
+  margin-top: 30px;
+}
+
 p {
   color: #636b6f;
   font-weight: 300;
@@ -2881,6 +2885,42 @@ footer h4 {
   font-size: 12px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+}
+
+.btn {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 10px;
+  border-radius: 2px;
+  border: 1px solid #333;
+  background-color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+}
+
+.btn:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn-primary {
+  color: #fff;
+  border: 1px solid #00aeef;
+  background-color: #00aeef;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #23c3ff;
+  background-color: #23c3ff;
+}
+
+.btn-lg {
+  padding: 10px 25px;
 }
 
 /*!
@@ -4091,16 +4131,6 @@ hr {
   background-color: #fff;
   border-radius: 2px;
   border: 1px solid #ddd;
-}
-
-.search-container .form-group button {
-  color: #fff;
-  padding: 8px 10px;
-  border-radius: 2px;
-  font-weight: 400;
-  font-size: 14px;
-  border: 1px solid #00aeef;
-  background-color: #00aeef;
 }
 
 .search-container .form-group:last-child {
