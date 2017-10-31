@@ -129,4 +129,43 @@ http://flickity.metafizzy.co
 .flickity-page-dots .dot.is-selected {
   opacity: 1;
 }
+h1 {
+  font-weight: 300;
+  margin-top: 0;
+}
 
+h3 {
+  margin: 40px 0px;
+}
+
+.single-project-carousel--nav {
+  margin-top: 20px;
+}
+
+.single-project-carousel--nav .carousel-cell {
+  margin: 0 5px;
+}
+
+.single-project-carousel--nav .carousel-cell img {
+  border-radius: 5px;
+}
+
+.single-project-carousel--nav .carousel-cell.is-nav-selected img {
+  border: 2px solid #00aeef;
+}
+
+.developer-projects-container {
+  margin: 40px 0px;
+  padding: 40px 0px;
+  background-color: #EDEFED;
+}
+
+.developer-projects-container h3 {
+  margin-top: 0;
+}
+
+aside .gform_wrapper h3.gform_title {
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 30px;
+}

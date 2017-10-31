@@ -1,7 +1,8 @@
 {
-    "/dist/js/home.js": "/dist/js/home.js",
+    "/dist/js/app.js": "/dist/js/app.js",
     "/dist/css/app.css": "/dist/css/app.css",
     "/dist/css/home.css": "/dist/css/home.css",
     "/dist/css/single-project.css": "/dist/css/single-project.css",
-    "/dist/js/single-project.js": "/dist/js/single-project.js"
+    "/dist/js/single-project.js": "/dist/js/single-project.js",
+    "/dist/js/home.js": "/dist/js/home.js"
 }

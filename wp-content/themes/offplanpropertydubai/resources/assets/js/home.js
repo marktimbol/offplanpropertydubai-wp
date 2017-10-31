@@ -8,12 +8,4 @@ $(document).ready(function() {
         pageDots: true,
         prevNextButtons: true,
     })
-
-    new Flickity('.developers-carousel', {
-        autoPlay: true,
-        contain: false,
-        pageDots: false,
-        cellAlign: 'left',
-        prevNextButtons: true,
-    })    
 });

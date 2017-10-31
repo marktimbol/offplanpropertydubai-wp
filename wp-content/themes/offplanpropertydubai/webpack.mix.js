@@ -12,11 +12,11 @@ let mix = require('laravel-mix');
  */
 
 mix.sass('resources/assets/sass/app.scss', 'dist/css')
+mix.js('resources/assets/js/app.js', 'dist/js')
 mix.sass('resources/assets/sass/home.scss', 'dist/css')
 mix.js('resources/assets/js/home.js', 'dist/js')
 mix.sass('resources/assets/sass/single-project.scss', 'dist/css')
 mix.js('resources/assets/js/single-project.js', 'dist/js')
-
 	.copy('./node_modules/font-awesome/fonts', 'dist/fonts')
 	.options({
 		processCssUrls: false,

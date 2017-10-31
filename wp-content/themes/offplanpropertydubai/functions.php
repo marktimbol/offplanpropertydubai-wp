@@ -3,17 +3,24 @@
 function my_theme_enqueue_styles() {
     $parent_style = 'parent-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
     // wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style',
+    wp_enqueue_style( 'child',
         get_stylesheet_directory_uri() . '/style.css',
         array(),
         wp_get_theme()->get('Version')
     );
     
-    wp_enqueue_style( 'app-style',
+    wp_enqueue_style( 'app',
         get_stylesheet_directory_uri() . '/dist/css/app.css',
         array(),
         wp_get_theme()->get('Version')
     );
+
+    wp_enqueue_script( 'app',
+        get_stylesheet_directory_uri() . '/dist/js/app.js',
+        array(),
+        wp_get_theme()->get('Version'),
+        true
+    );     
 
     if ( is_front_page() || is_home() ) {
         wp_enqueue_style( 'home',
@@ -34,7 +41,7 @@ function my_theme_enqueue_styles() {
             get_stylesheet_directory_uri() . '/dist/css/single-project.css',
             array(),
             wp_get_theme()->get('Version')
-        );    
+        );
         wp_enqueue_script( 'single-project',
             get_stylesheet_directory_uri() . '/dist/js/single-project.js',
             array(),
